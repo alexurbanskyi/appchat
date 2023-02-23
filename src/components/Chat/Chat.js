@@ -31,7 +31,6 @@ function Chat({ room }) {
   }, []);
 
   async function handelSubmit() {
-    //console.log("newMessage!!", newMessage);
     if (newMessage === "") return;
 
     await addDoc(messageRef, {
@@ -56,6 +55,7 @@ function Chat({ room }) {
 
   return (
     <div className="chat">
+      
         <h1>Welcome to: {room}</h1>
         {
             messages.map((mess) => <div key={mess.id}>{mess.text}</div> )

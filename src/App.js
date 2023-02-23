@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 import Chat from "./components/Chat/Chat";
 import {signOut} from 'firebase/auth'
 import {auth} from './firebase-config'
+import Header from "./components/Header/Header";
 
 
 const cookies = new Cookies();
@@ -30,6 +31,7 @@ function App() {
   }
   return (
     <div>
+      <Header setIsAuth={setIsAuth} setRoom={setRoom} />
       {room ? (
         <Chat room={room} />
       ) : (
