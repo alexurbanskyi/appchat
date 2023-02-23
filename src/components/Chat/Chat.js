@@ -31,7 +31,7 @@ function Chat({ room }) {
   }, []);
 
   async function handelSubmit() {
-    console.log("newMessage!!", newMessage);
+    //console.log("newMessage!!", newMessage);
     if (newMessage === "") return;
 
     await addDoc(messageRef, {
@@ -42,6 +42,18 @@ function Chat({ room }) {
     });
     setNewMessage("");
   }
+
+  // const sec = messages[3].createdAt
+  // console.log('sec  --->', sec)
+  // const datePost = new Date(sec.seconds * 1000);
+  // const formatted_date = datePost.getFullYear() + '-' + 
+  //                          ('0' + (datePost.getMonth() + 1)).slice(-2) + '-' + 
+  //                          ('0' + datePost.getDate()).slice(-2) + ' ' + 
+  //                          ('0' + datePost.getHours()).slice(-2) + ':' + 
+  //                          ('0' + datePost.getMinutes()).slice(-2);
+  //   console.log(`Дата и время создания документа: ${formatted_date}`);
+
+
   return (
     <div className="chat">
         <h1>Welcome to: {room}</h1>
