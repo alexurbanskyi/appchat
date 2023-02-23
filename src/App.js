@@ -10,20 +10,20 @@ const cookies = new Cookies();
 
 function App() {
   const [isAuth, setIsAuth] = useState(cookies.get("auth-token"));
-  
+
   const [room, setRoom] = useState("");
   const roomRef = useRef(null);
 
   if (!isAuth) {
     return (
       <div>
-        <Auth setIsAuth={setIsAuth}  />
+        <Auth setIsAuth={setIsAuth} />
       </div>
     );
   }
   return (
     <div>
-      <Header setIsAuth={setIsAuth} setRoom={setRoom} auth={auth}/>
+      <Header setIsAuth={setIsAuth} setRoom={setRoom} auth={auth} />
       {room ? (
         <Chat room={room} />
       ) : (

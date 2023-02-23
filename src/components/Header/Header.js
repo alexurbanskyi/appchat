@@ -12,13 +12,15 @@ function Header({ setIsAuth, setRoom, auth }) {
     setIsAuth(false);
     setRoom(null);
   }
-  console.log("Local!!!", localStorage.getItem('userName'));
   return (
     <div className="header">
       <div>
-        <img src={localStorage.getItem('userPhoto')} className="header_user_icon" />
+        <img
+          src={localStorage.getItem("userPhoto")}
+          className="header_user_icon"
+        />
       </div>
-      <div className="header_user_name">{localStorage.getItem('userName')}</div>
+      <div className="header_user_name">{localStorage.getItem("userName")}</div>
       <div className="header_logout" onClick={signUserOut}>
         <p className="logout_title">Sign Out</p>
         <p className="logout_icon">&#10148;</p>
