@@ -11,7 +11,10 @@ function Auth({ setIsAuth }) {
   async function signWithGoogle() {
     try {
       const result = await signInWithPopup(auth, provider);
+      console.log('RESULT --->', result)
       cookies.set("auth-token", result.user.refreshToken);
+      localStorage.setItem('userName', result.user.displayName)
+      localStorage.setItem('userPhoto', result.user.photoURL)
       setIsAuth(true);
     } catch (err) {
       console.log("ERROR ---->", err);
