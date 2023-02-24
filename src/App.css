@@ -6,4 +6,52 @@
 .App {
   text-align: center;
 }
-
+.container{
+  height: 100vh;
+  background-image: url('./images/chat_back.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: azure;
+}
+.room{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.room_title{
+  padding: 30px 0px;
+  font-size: 18px;
+}
+.room_title span{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.room_input{
+  width: 300px;
+  margin: 30px;
+  padding: 5px;
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: azure;
+  
+}
+::placeholder {
+  color: gray;
+  font-size: 15px;
+}
+.room_button{
+  margin: 50px 0px;
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid rgb(9, 17, 101);
+  border-radius: 10px;
+  background-color: rgb(79, 102, 195);
+  color: antiquewhite;
+  text-transform: uppercase;
+}

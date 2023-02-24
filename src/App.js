@@ -22,17 +22,18 @@ function App() {
     );
   }
   return (
-    <div>
+    <div className="container">
       <Header setIsAuth={setIsAuth} setRoom={setRoom} auth={auth} />
       {room ? (
         <Chat room={room} />
       ) : (
-        <div>
-          <label>Enter Room Name</label>
-          <input ref={roomRef} />
-          <button onClick={() => setRoom(roomRef.current.value)}>
+        <div className="room">
+          <div className="room_title">Enter <span>Room Name</span> For Start Chat</div>
+          <input ref={roomRef} className="room_input" placeholder="enter room name..."/>
+          <div className="room_button" onClick={() => setRoom(roomRef.current.value)}> Enter Chat</div>
+          {/* <button onClick={() => setRoom(roomRef.current.value)}>
             Enter Chat
-          </button>
+          </button> */}
         </div>
       )}
     </div>
