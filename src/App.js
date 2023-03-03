@@ -31,9 +31,6 @@ function App() {
           <div className="room_title">Enter <span>Room Name</span> For Start Chat</div>
           <input ref={roomRef} className="room_input" placeholder="enter room name..."/>
           <div className="room_button" onClick={() => setRoom(roomRef.current.value)}> Enter Chat</div>
-          {/* <button onClick={() => setRoom(roomRef.current.value)}>
-            Enter Chat
-          </button> */}
         </div>
       )}
     </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./chat.css";
+import UserMessage from "./UserMessage";
 
 import {
   addDoc,
@@ -32,7 +33,6 @@ function Chat({ room }) {
 
   async function handelSubmit() {
     if (newMessage === "") return;
-
     await addDoc(messageRef, {
       text: newMessage,
       createdAt: serverTimestamp(),
@@ -42,24 +42,22 @@ function Chat({ room }) {
     setNewMessage("");
   }
 
-  // const sec = messages[3].createdAt
-  // console.log('sec  --->', sec)
-  // const datePost = new Date(sec.seconds * 1000);
-  // const formatted_date = datePost.getFullYear() + '-' + 
-  //                          ('0' + (datePost.getMonth() + 1)).slice(-2) + '-' + 
-  //                          ('0' + datePost.getDate()).slice(-2) + ' ' + 
-  //                          ('0' + datePost.getHours()).slice(-2) + ':' + 
-  //                          ('0' + datePost.getMinutes()).slice(-2);
-  //   console.log(`Дата и время создания документа: ${formatted_date}`);
+  
 
 
   return (
     <div className="chat">
       
-        <h1>Welcome to: {room}</h1>
+        <div className="chat_greeting">Welcome</div>
+        <div className="chat_name_title">ROOM:</div>
+        <div className="chat_name">{room}</div>
+        
         {
-            messages.map((mess) => <div key={mess.id}>{mess.text}</div> )
+          messages.map((mess) => <UserMessage message={mess} />)
         }
+        {/* {
+            messages.map((mess) => <div key={mess.id}>{mess.text}</div> )
+        } */}
       <input
         placeholder="type your message..."
         onChange={(e) => setNewMessage(e.target.value)}
