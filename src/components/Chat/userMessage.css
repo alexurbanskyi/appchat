@@ -1,5 +1,5 @@
 .message_container{
-    background-color: rgb(158, 156, 153);
+    background-color: rgb(79, 102, 195);
     padding: 0px 10px;
     margin: 5px 0px;
     border-radius: 7px;
@@ -17,7 +17,7 @@
 }
 .message_text{
     padding: 5px;
-    background-color: black;
+    background-color: rgb(31, 30, 30);
     color: beige;
     font-size: 15px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
